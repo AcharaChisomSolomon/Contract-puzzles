@@ -25,9 +25,6 @@ describe("Game5", function () {
             value: ethers.parseUnits("1", "ether")
         });
 
-        console.log("Wallet address: ", wallet.address);
-        console.log("Address big number: ", addressBigNumber);
-
         await game5.connect(wallet).win()
 
         expect(await game5.isWon()).to.equal(true);
